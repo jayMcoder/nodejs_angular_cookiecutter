@@ -21,7 +21,11 @@ module.exports = {
       {
         from: './assets',
         to: 'assets',
-      }
+      },
+      {
+        from: './public',
+        to: 'public',
+      },
     ]),
   ],
   module: {

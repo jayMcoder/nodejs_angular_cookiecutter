@@ -1,4 +1,5 @@
 import * as express from 'express';
+import { join } from 'path';
 import testRouter from './routes/route.test';
 
 const app = express();
@@ -6,7 +7,7 @@ const app = express();
 // Express config
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use('static', express.static('public'));
+app.use('/static', express.static(join(__dirname, 'public')));
 
 // Express routers
 app.use('/api/v1', testRouter);

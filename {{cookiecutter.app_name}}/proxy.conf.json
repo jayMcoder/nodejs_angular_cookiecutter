@@ -1,0 +1,8 @@
+{
+  "/": {
+    "target": "http://localhost:{{cookiecutter.dev_server_port}}/",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

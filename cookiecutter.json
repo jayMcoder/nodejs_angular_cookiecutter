@@ -1,0 +1,12 @@
+{
+    "app_name": "angular-app1",
+    "app_title": "Angular project",
+    "app_description": "Cookiecutter angular application test",
+    "full_name": "Your full name",
+    "email": "Email id",
+    "github_project_org": "Project org",
+    "docker_project_org": "Docker project org",
+    "dev_server_port": 3001,
+    "dev_client_port": 4200,
+    "jenkins_agent": "Jenkins build agent"
+}

@@ -1,0 +1,20 @@
+# Ignore development folders
+.github
+.sonarlint
+.vscode
+
+# Ignore linters
+.eslintignore
+.eslintrc.json
+.jshintrc
+.markdownlint.json
+tslint.json
+
+# Ignore config
+.editorconfig
+.gitignore
+Jenkinsfile
+README.md
+
+# Ignore node modules folder
+node_modules

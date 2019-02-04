@@ -1,0 +1,26 @@
+#!groovy
+
+pipeline {
+  agent { label '{{cookiecutter.jenkins_agent}}' }
+  options {
+    skipDefaultCheckout()         // To skip checkout in each step
+    disableConcurrentBuilds()     // To disable concurent builds on same branch
+  }
+  environment {
+    ORG_NAME = "{{cookiecutter.docker_project_org}}"
+    APP_NAME = "{{cookiecutter.app_name}}"
+    DOCKER_IMG = "${env.DOCKER_REGISTRY}/${env.ORG_NAME}/${env.APP_NAME}"
+    DOCKER_IMG_DEV = "${env.DOCKER_IMG}_dev"
+    DOCKER_IMG_STG = "${env.DOCKER_IMG}:stage"
+    DOCKER_IMG_PRD = "${env.DOCKER_IMG}:latest"
+  }
+  stages {
+    stage('Checkout Code from SCM') {
+      steps {
+        /* Default scm checkout step */
+        checkout scm
+        sh "echo Checkout branch: ${env.BRANCH_NAME}."
+      }
+    }
+  }
+}

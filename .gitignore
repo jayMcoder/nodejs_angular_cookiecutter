@@ -1,0 +1,8 @@
+# Ignore sonarlint
+.sonarlint
+
+# Ignore package-lock
+package-lock.json
+
+# Ignore node modules folder
+node_modules
